@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love</title>
+
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle,#ff7eb3,#ff4d88,#ff1f6b);
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    position:relative;
+    text-align:center;
+    z-index:2;
+}
+
+.heart-frame{
+    width:420px;
+    height:380px;
+    position:relative;
+    margin:auto;
+    clip-path:path("M210 350 C50 250 0 130 90 60 C150 10 210 70 210 110 C210 70 270 10 330 60 C420 130 370 250 210 350");
+    overflow:hidden;
+    box-shadow:0 0 40px #fff,0 0 80px #ff66b2;
+    animation: glow 2s infinite alternate;
+}
+
+.heart-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+h1{
+    color:white;
+    font-size:70px;
+    margin-top:20px;
+    text-shadow:0 0 20px #fff,0 0 40px #ff4da6;
+}
+
+p{
+    color:white;
+    font-size:28px;
+    text-shadow:0 0 10px pink;
+}
+
+@keyframes glow{
+    from{box-shadow:0 0 30px #fff,0 0 60px #ff66b2;}
+    to{box-shadow:0 0 60px #fff,0 0 100px #ff1493;}
+}
+
+.heart{
+    position:absolute;
+    color:#fff;
+    animation: float linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(.5);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-20vh) scale(1.5);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heart-frame">
+        <img src="girlfriend.jpg" alt="My Love">
+    </div>
+    <h1>For my songsa 💖</h1>
+    <p>Dear 
+        my happiness b sl o klg nas pov one day b ng take care o rhot penh muy jivit b 
+    tang pi t'bong kr b sl o lv kr b kan tea sl o klg hope tha puk  yg pel nv jmuy knea hx loar muy
+knea ng loar jmuy knea rhot b sl o klg nas pov hx kr hope tha o nv jmuy b o ng sby jivit
+pi b naii sl o klg nas pov</p>
+</div>
+
+<script>
+const hearts=["💖","💕","❤️","💘","💗"];
+
+
+for(let i=0;i<120;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(15+Math.random()*40)+"px";
+    h.style.animationDuration=(5+Math.random()*8)+"s";
+    h.style.animationDelay=Math.random()*5+"s";
+    document.body.appendChild(h);
+}
+</script>
+
+</body>
+<h1> <a href="https://youtu.be/X7OUf6EOCzY?list=PLRL1s_UYrj9s-5q7ermP8Jlsu-8afqh-h">
+    click bong hx sdab pi arom bong
+</a></h1>
+</html>
